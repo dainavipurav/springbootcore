@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WorkoutRestController {
     private Coach coach;
 
+//    Constructor injection example
     @Autowired
     public WorkoutRestController(Coach coach){
         this.coach = coach;
