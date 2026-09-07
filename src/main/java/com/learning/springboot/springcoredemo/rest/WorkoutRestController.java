@@ -11,9 +11,10 @@ public class WorkoutRestController {
     private Coach coach;
 
 //    Constructor injection example
-//    Use @Qualifier annotation when there are multiple bean dependencies with same type
     @Autowired
-    public WorkoutRestController(@Qualifier("cricketCoach") Coach coach){
+//    Use @Qualifier annotation when there are multiple bean dependencies with same type
+//    public WorkoutRestController(@Qualifier("trackCoach") Coach coach){
+    public WorkoutRestController(Coach coach){
         this.coach = coach;
     }
 
