@@ -10,8 +10,15 @@ public class WorkoutRestController {
     private Coach coach;
 
 //    Constructor injection example
+//    @Autowired
+//    public WorkoutRestController(Coach coach){
+//        this.coach = coach;
+//    }
+
+
+//    Setter Injection example
     @Autowired
-    public WorkoutRestController(Coach coach){
+    public void setCoach(Coach coach){
         this.coach = coach;
     }
 
