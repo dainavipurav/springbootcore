@@ -1,6 +1,8 @@
 package com.learning.springboot.springcoredemo.rest;
 
 import com.learning.springboot.springcoredemo.commons.Coach;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,5 +37,17 @@ public class WorkoutRestController {
     @GetMapping("/check")
     String check(){
         return "coach == coach2 : " + (coach == coach2);
+    }
+
+    // Bean lifecycle method annotation
+    @PostConstruct
+    void init(){
+        System.out.println("Custom Bean initialization method called....");
+    }
+
+    // Bean lifecycle method annotation
+    @PreDestroy
+    void destroy(){
+        System.out.println("Custom Bean destroy method called....");
     }
 }

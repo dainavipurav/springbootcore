@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 
 // Initiates bean lazily or when required
 //@Lazy
+
+// Specifying bean scope
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 @Component
 public class TrackCoach implements Coach{
