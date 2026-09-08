@@ -42,12 +42,12 @@ public class WorkoutRestController {
     // Bean lifecycle method annotation
     @PostConstruct
     void init(){
-        System.out.println("Custom Bean initialization method called....");
+        System.out.println("Custom Bean initialization method called...." + getClass().getSimpleName());
     }
 
     // Bean lifecycle method annotation
     @PreDestroy
     void destroy(){
-        System.out.println("Custom Bean destroy method called....");
+        System.out.println("Custom Bean destroy method called...." + getClass().getSimpleName());
     }
 }
